@@ -1,21 +1,21 @@
 package com.server.kval.domain;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
 @RequiredArgsConstructor
 @Entity
-@Table(name="customers")
-public class Customers {
+@Table(name="categories")
+public class Categories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "customers_id")
+    @Column(name = "category_id")
     private Long id;
 
+    private String name;
+    private String description;
 
 }
